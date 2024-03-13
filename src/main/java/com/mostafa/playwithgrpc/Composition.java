@@ -1,34 +1,33 @@
 package com.mostafa.playwithgrpc;
 
-import com.mostafa.models.Address;
-import com.mostafa.models.School;
-import com.mostafa.models.Student;
 
+import com.mostafa.models.Book;
+import com.mostafa.models.Library;
+
+import java.util.List;
 
 public class Composition {
 
     public static void main(String[] args) {
-        var address = Address.newBuilder()
-                .setStreet("main st.")
-                .setCity("atlanta")
-                .setState("GA")
-                .build();
-
-        var student = Student.newBuilder()
-                .setAddress(address)
-                .setName("mostafa")
+        var book1 = Book.newBuilder()
+                .setTitle("harry potter 1")
+                .setAuthor("darwesh")
+                .setPublicationYear(1997)
                 .build();
 
 
-        var school = School.newBuilder()
-                .setId(1)
-                .setName("shoubra el kawmya")
-                .setAddress(address.toBuilder().setStreet("shoubra"))
+        var book2 = Book.newBuilder()
+                .setTitle("harry potter 2")
+                .setAuthor("mostafa")
+                .setPublicationYear(1998)
                 .build();
 
 
-        System.out.println(student);
+        var library = Library.newBuilder()
+                .setName("fantasy library")
+                .addAllBooks(List.of(book1,book2))
+                .build();
 
-        System.out.println(school);
+        System.out.println(library);
     }
 }

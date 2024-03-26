@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+option java_package = "com.mostafa.models";
+
+
+message Car{
+  string make = 1;
+  string model = 2;
+  int32 year = 3;
+  BodyStyle bodyStyle = 4;
+}
+
+
+
+message Dealer{
+  map<int32, ListOfCars>inventory = 1;
+}
+
+message ListOfCars{
+  repeated Car cars = 1;
+}
+
+enum BodyStyle{
+  COUPE = 0;
+  SEDAN = 1;
+  SUV = 2;
+}

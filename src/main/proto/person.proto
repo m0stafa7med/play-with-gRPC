@@ -1,5 +1,6 @@
 syntax = "proto3";
-
+import "sec04/common/composition.proto";
+import "sec04/common/mapTest.proto";
 option java_multiple_files = true;
 
 option java_package = "com.mostafa.models";
@@ -12,6 +13,7 @@ message Person{
   double salary = 5;
   int64 bank_account_number = 6;
   sint32 balance = 7;
-
+  sec04.common.Address address = 8;
+  sec04.common.Car car = 9;
 }
 

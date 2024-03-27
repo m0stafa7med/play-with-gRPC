@@ -1,8 +1,9 @@
 syntax = "proto3";
+package sec04.common;
 
 option java_multiple_files = true;
 
-option java_package = "com.mostafa.models";
+option java_package = "com.mostafa.models.common";
 
 
 message Car{

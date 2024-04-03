@@ -9,6 +9,7 @@ public class V1Parser {
 
         System.out.println("v1 brand "+tv.getBrand());
         System.out.println("v1 year " + tv.getYear());
+        System.out.println("v1 age " + tv.getAge());
 
     }
 }

@@ -10,7 +10,7 @@ option java_package = "com.mostafa.models.sec05.v2";
 message Television{
   string brand = 1;
   // changed year to model
-  int32 model = 2;
+  int32 model = 22;
   Type type = 3;
 }
 

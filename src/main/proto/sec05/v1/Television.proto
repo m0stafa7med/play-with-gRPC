@@ -9,4 +9,5 @@ option java_package = "com.mostafa.models.sec05.v1";
 message Television{
   string brand = 1;
   int32 year = 2;
+  int32 age = 3;
 }

@@ -1,7 +1,7 @@
 package com.mostafa.common;
 
+import com.mostafa.service.BankService;
 import io.grpc.ServerBuilder;
-import sec06.BankService;
 
 import java.io.IOException;
 

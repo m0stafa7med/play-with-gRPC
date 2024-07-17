@@ -34,7 +34,7 @@ public class GrpcServer {
 
         try {
             server.start();
-            System.out.println("service started. on port " + server.getPort() + "services " + services);
+            System.out.println("service started. on port " + server.getPort() + " services " + services);
             return this;
         } catch (IOException e) {
             throw new RuntimeException(e);

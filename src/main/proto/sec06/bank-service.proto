@@ -1,6 +1,8 @@
 syntax = "proto3";
 package sec06;
 
+import "google/protobuf/empty.proto";
+
 option java_multiple_files = true;
 option java_package = "com.mostafa.models.sec06";
 
@@ -13,8 +15,15 @@ message AccountBalance{
   int32 balance = 2;
 }
 
+message AllAccountsResponse{
+  repeated AccountBalance accounts = 1;
+}
+
 service BankService {
+
   rpc GetAccountBalance(BalanceCheckRequest) returns(AccountBalance);
+
+  rpc GetAllAccounts(google.protobuf.Empty) returns(AllAccountsResponse);
 }
 
 
